@@ -63,7 +63,7 @@ def main():
     metric_file_name = finish_samples()
     period['metric-files'].append(metric_file_name)
     iter_sample['periods'].append(period)
-    f = open('post-process-data.json', 'w')
+    f = open('postprocess/post-process-data.json', 'w')
     f.write(json.dumps(iter_sample))
     f.close
     return(0)
