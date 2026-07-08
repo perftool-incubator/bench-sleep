@@ -4,15 +4,8 @@
 
 import sys
 import os
-import lzma
-import re
-import copy
 import math
 import json
-import yaml
-import argparse
-import glob
-from datetime import datetime
 from pathlib import Path
 
 TOOLBOX_HOME = os.environ.get('TOOLBOX_HOME')
@@ -37,8 +30,8 @@ class t_global(object):
 
 def main():
     # In any benchmark post-process script, the metrics generated need to be attributed to a
-    # time-period (AKA benchmark-phase).  The period which is used to report and offical
-    # result for the benchmark is the 'measurement' period.  Other periods thay may exist
+    # time-period (AKA benchmark-phase).  The period which is used to report an official
+    # result for the benchmark is the 'measurement' period.  Other periods that may exist
     # could be "warm-up", "prep", etc.
 
     iter_sample = {
@@ -65,7 +58,7 @@ def main():
     iter_sample['periods'].append(period)
     f = open('postprocess/post-process-data.json', 'w')
     f.write(json.dumps(iter_sample))
-    f.close
+    f.close()
     return(0)
 
 if __name__ == "__main__":
