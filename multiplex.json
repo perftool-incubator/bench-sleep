@@ -1,14 +1,14 @@
 {
     "presets": {
-        "defaults" : [
+        "defaults": [
             { "arg": "seconds", "vals": ["600"] }
         ]
     },
     "validations": {
-        "positive_integer" : {
-            "description" : "a whole number greater than 0",
-            "args" : [ "seconds" ],
-            "vals" : "[1-9][0-9]*"
+        "positive_integer": {
+            "description": "a whole number greater than 0",
+            "args": [ "seconds" ],
+            "vals": "^[1-9][0-9]*$"
         }
     }
 }
