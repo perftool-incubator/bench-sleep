@@ -12,6 +12,5 @@ Scripts and configuration to run the sleep benchmark within the [crucible](https
 | `benchmark-metadata.json` | Machine-readable description and CDM-indexed source/type list (consumed by `crucible benchmarks list`) |
 | `sleep-client` | Client-side execution (runs sleep) |
 | `sleep-get-runtime` | Extracts runtime from command-line options |
-| `sleep-post-process` | Post-processing script |
+| `sleep-post-process.py` | Post-processing script |
 | `workshop.json` | Engine image build requirements |
-
