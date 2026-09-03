@@ -20,8 +20,7 @@ else:
         print("ERROR: <TOOLBOX_HOME>/python ('%s') does not exist!" % (p))
         exit(2)
     sys.path.append(str(p))
-from toolbox.metrics import log_sample
-from toolbox.metrics import finish_samples
+from toolbox.cdm_metrics import CDMMetrics
 
 params = {}
 
@@ -29,6 +28,8 @@ class t_global(object):
      args = None
 
 def main():
+    metrics = CDMMetrics()
+
     # In any benchmark post-process script, the metrics generated need to be attributed to a
     # time-period (AKA benchmark-phase).  The period which is used to report an official
     # result for the benchmark is the 'measurement' period.  Other periods that may exist
@@ -52,8 +53,8 @@ def main():
     end_ts = int(math.floor(float(sleep_stop) * 1000))
     begin_ts = int(math.floor(float(sleep_start) * 1000))
     sample = {'begin': begin_ts, 'end': end_ts, 'value': 100}
-    log_sample(file_id, desc, names, sample)
-    metric_file_name = finish_samples()
+    metrics.log_sample(file_id, desc, names, sample)
+    metric_file_name = metrics.finish_samples()
     period['metric-files'].append(metric_file_name)
     iter_sample['periods'].append(period)
     f = open('postprocess/post-process-data.json', 'w')
