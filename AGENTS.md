@@ -5,7 +5,7 @@ Minimal benchmark that exercises the full crucible pipeline without adding workl
 
 ## Language
 - Bash for client execution scripts
-- Python for post-processing (`sleep-post-process`)
+- Python for post-processing (`sleep-post-process.py`)
 
 ## Key Files
 | File | Purpose |
@@ -15,7 +15,7 @@ Minimal benchmark that exercises the full crucible pipeline without adding workl
 | `benchmark-metadata.json` | Machine-readable description and CDM-indexed source/type list (consumed by `crucible benchmarks list`) |
 | `sleep-client` | Client-side execution (runs sleep) |
 | `sleep-get-runtime` | Extracts runtime from command-line options |
-| `sleep-post-process` | Post-processing script |
+| `sleep-post-process.py` | Post-processing script |
 | `workshop.json` | Engine image build requirements |
 
 ## Conventions

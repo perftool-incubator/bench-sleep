@@ -6,7 +6,7 @@
     },
     "benchmark": "sleep",
     "controller" : {
-        "post-script" : "%bench-dir%sleep-post-process"
+        "post-script" : "%bench-dir%sleep-post-process.py"
     },
     "client" : {
         "files-from-controller": [
